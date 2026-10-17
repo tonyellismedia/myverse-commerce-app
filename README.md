@@ -4,6 +4,10 @@ myverse commerce project
 
 An original multi-store commerce application for luxury interiors, furniture, lighting, and decorative objects. Myverse has its own design and branding and has no Shopify dependency.
 
+## Run with Docker
+
+With Docker and Compose installed, run `docker compose up -d --build --wait`. The app listens on loopback port 8080 and keeps store data in a persistent named volume. See [DOCKER.md](DOCKER.md) for setup, optional AI credentials, updates, and using an existing server. Railway is optional.
+
 ## Development
 
 Use Node.js 24 or newer and npm:
