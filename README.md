@@ -1,5 +1,7 @@
 # Myverse
 
+myverse commerce project
+
 An original multi-store commerce application for luxury interiors, furniture, lighting, and decorative objects. Myverse has its own design and branding and has no Shopify dependency.
 
 ## Development
@@ -38,4 +40,4 @@ Read [DEPLOYMENT.md](DEPLOYMENT.md) for Railway, the authorized **$5/month per s
 
 Stripe transactions, payouts, taxes, delivery coverage, and account eligibility require merchant/provider setup. Password recovery, customer accounts, app-generated email receipts, and refund-state synchronization are not implemented. Do not call the service fully production-ready before provider setup and live/test-mode verification.
 
-Railway deployment source: `tonyellismedia/myverse-commerce`, branch `main`.
+Railway deployment source: `tonyellismedia/myverse-commerce-app`, branch `main`.

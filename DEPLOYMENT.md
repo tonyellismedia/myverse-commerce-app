@@ -10,7 +10,7 @@ The AI server persists usage in SQLite, limits each store to 20 requests/day and
 
 ## Deploy through the existing GitHub connection
 
-1. In Railway, create a project from the GitHub repository `tonyellismedia/myverse-commerce`. Select branch `main`, which contains Myverse's Dockerfile, railway.json, and application source. A source branch must be pushed successfully before Railway can build it; local files alone are not available to Railway.
+1. In Railway, create a project from the GitHub repository `tonyellismedia/myverse-commerce-app`. Select branch `main`, which contains Myverse's Dockerfile, railway.json, and application source. A source branch must be pushed successfully before Railway can build it; local files alone are not available to Railway.
 2. Before starting a paid deployment, verify the Railway plan and account usage limit fit **$5 total per month**. Set the platform's hard usage limit when available. If the plan minimum or required resources exceed $5, leave deployment paused and report the blocker.
 3. Use one replica. A local verification container runs with a 256 MB memory ceiling and 0.5 CPU; apply corresponding service limits if Railway offers them. Add a small persistent volume mounted at `/var/data` (0.5 GB is sufficient to start). Do not run multiple SQLite writers across replicas or remove the volume during redeployment.
 4. Configure `NODE_ENV=production`, `HOST=0.0.0.0`, and `DATABASE_PATH=/var/data/commerce.sqlite`. Let Railway provide `PORT`; the server reads it. The container initializes volume ownership then drops to UID/GID 1000 before serving requests. Health checks use `/api/health`.
